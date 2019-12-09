@@ -3,7 +3,10 @@
 <section id='members'>
   <% members.order_of_the_phoenix(house).each_with_index do |member, index| %>
     <section id='member-<%= index %>'>
-      <% binding.pry %>
+      <p>Name: <%= member.name %></p>
+      <p>Role: <%= member.name %></p>
+      <p>House: <%= member.name %></p>
+      <p>Patronus: <%= member.name %></p>
     </section>
   <% end %>
 </section>
