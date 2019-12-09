@@ -5,9 +5,9 @@ class PotterService
     end
   end
 
-  def self.get_members(house)
+  def self.fetch_members
     response = conn.get("/v1/characters")
 
-    members = JSON.parse(response.body, symbolize_names: true)
+    JSON.parse(response.body, symbolize_names: true)
   end
 end
