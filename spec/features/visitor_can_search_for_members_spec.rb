@@ -9,7 +9,7 @@ describe 'As a visitor', type: :feature do
     expect(current_path).to eq('/search')
 
     within '#members' do
-      expect(page).to have_css(count: 21)
+      expect(page).to have_content('Name', count: 21)
     end
 
     within '#member-0' do
