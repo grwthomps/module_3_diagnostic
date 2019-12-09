@@ -3,13 +3,13 @@
 <section id='members'>
   <% members.order_of_the_phoenix(house).each_with_index do |member, index| %>
     <section id='member-<%= index %>'>
-      <p>Name: <%= member.name %></p>
+      <p><strong>Name:</strong> <%= member.name %></p>
       <% if member.role != nil %>
-        <p>Role: <%= member.role %></p>
+        <p><strong>Role:</strong> <%= member.role %></p>
       <% end %>
-      <p>House: <%= member.house %></p>
+      <p><strong>House:</strong> <%= member.house %></p>
       <% if member.patronus != nil %>
-        <p>Patronus: <%= member.patronus %></p>
+        <p><strong>Patronus:</strong> <%= member.patronus %></p>
       <% end %>
       <p>--------------------</p>
     </section>
