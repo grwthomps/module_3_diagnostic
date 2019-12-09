@@ -1,0 +1,17 @@
+<h1><%= house %> Members</h1>
+
+<section id='members'>
+  <% members.order_of_the_phoenix(house).each_with_index do |member, index| %>
+    <section id='member-<%= index %>'>
+      <p><strong>Name:</strong> <%= member.name %></p>
+      <% if member.role != nil %>
+        <p><strong>Role:</strong> <%= member.role %></p>
+      <% end %>
+      <p><strong>House:</strong> <%= member.house %></p>
+      <% if member.patronus != nil %>
+        <p><strong>Patronus:</strong> <%= member.patronus %></p>
+      <% end %>
+      <p>--------------------</p>
+    </section>
+  <% end %>
+</section>
