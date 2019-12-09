@@ -4,9 +4,14 @@
   <% members.order_of_the_phoenix(house).each_with_index do |member, index| %>
     <section id='member-<%= index %>'>
       <p>Name: <%= member.name %></p>
-      <p>Role: <%= member.name %></p>
-      <p>House: <%= member.name %></p>
-      <p>Patronus: <%= member.name %></p>
+      <% if member.role != nil %>
+        <p>Role: <%= member.role %></p>
+      <% end %>
+      <p>House: <%= member.house %></p>
+      <% if member.patronus != nil %>
+        <p>Patronus: <%= member.patronus %></p>
+      <% end %>
+      <p>--------------------</p>
     </section>
   <% end %>
 </section>
